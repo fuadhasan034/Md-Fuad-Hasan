@@ -458,3 +458,19 @@ function typeName() {
 }
 
 window.addEventListener("load", typeName);
+/* ===== Smooth Typing Animation ===== */
+
+const nameText = "Fuad Hasan";
+const nameEl = document.getElementById("typing-name");
+
+let i = 0;
+
+function typeName() {
+    if (i < nameText.length) {
+        nameEl.textContent += nameText.charAt(i);
+        i++;
+        setTimeout(typeName, 120);
+    }
+}
+
+window.addEventListener("DOMContentLoaded", typeName);
