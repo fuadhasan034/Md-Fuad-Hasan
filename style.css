@@ -380,3 +380,76 @@ body {
         font-size: 13px;
     }
 }
+/* ===== PREMIUM LOGO SYSTEM ===== */
+
+.logo-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Circle frame */
+.logo-circle {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(135deg, #0f9d58, #0b5e3b);
+    box-shadow: 0 14px 35px rgba(0,0,0,0.25);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Image inside circle */
+.logo-circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #fff;
+}
+
+/* Hover premium feel */
+.logo-circle:hover {
+    transform: scale(1.08);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+}
+
+/* Animated name */
+#typing-name {
+    margin-top: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #111;
+    letter-spacing: 0.6px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+/* Fade + slide animation */
+.name-show {
+    animation: nameReveal 1.6s ease forwards;
+}
+
+@keyframes nameReveal {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .logo-circle {
+        width: 56px;
+        height: 56px;
+    }
+
+    #typing-name {
+        font-size: 14px;
+    }
+}
