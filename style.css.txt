@@ -1,0 +1,7 @@
+portfolio/
+├── index.html
+├── style.css
+├── script.js
+└── assets/
+    ├── logo.svg (generated inline)
+    └── favicon.svg (generated inline)
